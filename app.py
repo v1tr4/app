@@ -69,3 +69,73 @@ st.table(df)
 st.text("Metrix")
 st.metric("KPI", 56, 3)
 
+
+#Display Code average of a list
+st.text("Display Code")
+
+code = '''def cal_average(numbers):
+    sum_number = 0
+    for t in numbers:
+        sum_number = sum_number + t           
+
+    average = sum_number / len(numbers)
+    return average'''
+st.code(code, language='python')
+
+
+#Progress bar
+st.text("Progress Bar")
+bar_p = st.progress(0)
+
+for percentage_complete in range(100):
+    time.sleep(0.1)
+    bar_p.progress(percentage_complete + 1)
+#Status message
+#display a temporary message when executing a block of code
+with st.spinner('Please wait...'):
+    time.sleep(5)
+st.write('Complete!')
+
+
+st.text("Show celebratory balloons")
+st.balloons()
+
+st.text("Show an error message")
+st.error("An Error was encountered")
+
+st.text("Display a warning message")
+st.warning("Incompatible data point!")
+
+st.text("Display informational messages")
+st.info("Page is refreshed every 2 hours")
+
+st.text("Display success messages")
+st.success("Record found!")
+
+st.text("Display an exception in your application")
+exp = ValueError('This is an exception of type ValueError')
+st.exception(exp)
+
+
+st.text("plotly")
+import plotly.express as px
+# This data frame has 244 rows, but 4 unique entries for the `day` variable
+df = px.data.tips()
+fig = px.pie(df, values='tip', names='day')
+# Plot!
+st.plotly_chart(fig, use_container_width=True)
+
+st.text("Dispkay Altair/scatter ")
+import altair as alt
+import streamlit as st
+import numpy as np
+
+df = pd.DataFrame(
+     np.random.randn(300, 4),
+     columns=['a', 'b', 'c', 'd'])
+
+chrt = alt.Chart(df).mark_circle().encode(
+     x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c', 'd'])
+
+st.altair_chart(chrt, use_container_width=True)
+
