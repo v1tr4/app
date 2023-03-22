@@ -82,21 +82,6 @@ code = '''def cal_average(numbers):
     return average'''
 st.code(code, language='python')
 
-
-#Progress bar
-st.text("Progress Bar")
-bar_p = st.progress(0)
-
-for percentage_complete in range(100):
-    time.sleep(0.1)
-    bar_p.progress(percentage_complete + 1)
-#Status message
-#display a temporary message when executing a block of code
-with st.spinner('Please wait...'):
-    time.sleep(5)
-st.write('Complete!')
-
-
 st.text("Show celebratory balloons")
 st.balloons()
 
@@ -139,3 +124,18 @@ chrt = alt.Chart(df).mark_circle().encode(
 
 st.altair_chart(chrt, use_container_width=True)
 
+
+#Progress bar
+import time
+
+st.text("Progress Bar")
+bar_p = st.progress(0)
+
+for percentage_complete in range(100):
+    time.sleep(0.1)
+    bar_p.progress(percentage_complete + 1)
+#Status message
+#display a temporary message when executing a block of code
+with st.spinner('Please wait...'):
+    time.sleep(5)
+st.write('Complete!')
