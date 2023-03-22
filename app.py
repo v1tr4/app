@@ -23,8 +23,17 @@ st.markdown("""
 
 
 # Caption
+
+
 # Code block
+
+st.code("y = mx + c")
+
 # Text
+st.text("This is a trial project !")
+
 # LaTeX
+
+st.latex("\ int a y^2 \ , dy")
 
 
