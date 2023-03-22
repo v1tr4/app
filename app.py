@@ -37,3 +37,35 @@ st.text("This is a trial project !")
 st.latex("\ int a y^2 \ , dy")
 
 
+
+# Dataframe 
+
+import pandas as pd
+#students names
+students = ["Amelia Kami", "Antoinne Mark", "Peter Zen", "North Kim"]
+#marks
+marks = [82, 76, 96, 68]
+
+df = pd.DataFrame()
+
+df["Student Name"] = students
+
+df["Marks"] = marks
+
+
+#Save to dataframe
+df.to_csv("students.csv", index = False)
+
+
+#display dataframe
+st.text("DataFrame")
+st.dataframe(df)
+
+#Static table
+st.text("Static Table")
+st.table(df)
+
+#Metrics
+st.text("Metrix")
+st.metric("KPI", 56, 3)
+
