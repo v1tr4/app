@@ -170,7 +170,7 @@ st.pyplot(fig)
 #deck.gl
 #st.deck_gl_chart(data)
 #pyDeck
-st.pydeck_chart(data)
+#st.pydeck_chart(data)
 
 
 st.text("button")
