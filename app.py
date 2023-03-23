@@ -94,8 +94,6 @@ code = '''def cal_average(numbers):
     return average'''
 st.code(code, language='python')
 
-st.text("Show celebratory balloons")
-st.balloons()
 
 st.text("Show an error message")
 st.error("An Error was encountered")
@@ -150,7 +148,9 @@ for percentage_complete in range(100):
 #display a temporary message when executing a block of code
 with st.spinner('Please wait...'):
     time.sleep(5)
-st.write('Complete!')
+st.write('Complete! Show celebratory balloons')
+
+st.balloons()
 
 
 st.text("Matplotlib")
@@ -167,10 +167,8 @@ st.pyplot(fig)
 #st.vega_lite_chart(data)
 #matplotlib
 st.pyplot(fig)
-#seaborn
-st.pyplot(fig)
 #deck.gl
-st.deck_gl_chart(data)
+#st.deck_gl_chart(data)
 #pyDeck
 st.pydeck_chart(data)
 
