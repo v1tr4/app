@@ -164,7 +164,7 @@ plt.grid()
 st.pyplot(fig)
 
 #vega-lite
-st.vega_lite_chart(data)
+#st.vega_lite_chart(data)
 #matplotlib
 st.pyplot(fig)
 #seaborn
