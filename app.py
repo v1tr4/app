@@ -2,6 +2,15 @@ import streamlit as st
 
 #Text elements:
 
+#side bar
+st.sidebar.text('Daftar Hadir')
+nama = st.sidebar.text_input('Masukkan nama anda :', value='')
+email = st.sidebar.text_input('Masukkan email anda :', value='')
+
+
+form = st.form(key='my-form')
+inputGRE = form.number_input("Masukan Umur anda : ", 0)
+
 # Title
 st.title('Streamlit app 1st attempt')
 # Header
@@ -139,3 +148,47 @@ for percentage_complete in range(100):
 with st.spinner('Please wait...'):
     time.sleep(5)
 st.write('Complete!')
+
+
+st.text("Matplotlib")
+import matplotlib.pyplot as plt
+import numpy as np
+
+arr = np.random.normal(1, 1, size=1000)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=30)
+plt.grid()
+st.pyplot(fig)
+
+#vega-lite
+st.vega_lite_chart(data)
+#matplotlib
+st.pyplot(fig)
+#seaborn
+st.pyplot(fig)
+#deck.gl
+st.deck_gl_chart(data)
+#pyDeck
+st.pydeck_chart(data)
+#bokeh
+`st.bokeh_chart()`
+
+st.text("button")
+st.button("Click here")
+
+st.text("Check Box")
+selected = st.checkbox("Accept terms")
+
+st.text("select Box")
+option = st.selectbox(
+     'How would you like to receive your package?',
+     ('By air', 'By sea', 'By rail'))
+
+st.write('You selected:', option)
+
+st.text("Date")
+import datetime
+day = st.date_input(
+     "When is your birthday?",
+     datetime.date(2022, 7, 6))
+st.write('Your birthday is:', day)
