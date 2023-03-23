@@ -170,8 +170,7 @@ st.pyplot(fig)
 st.deck_gl_chart(data)
 #pyDeck
 st.pydeck_chart(data)
-#bokeh
-`st.bokeh_chart()`
+
 
 st.text("button")
 st.button("Click here")
