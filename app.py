@@ -6,10 +6,11 @@ import streamlit as st
 st.sidebar.text('Daftar Hadir')
 nama = st.sidebar.text_input('Masukkan nama anda :', value='')
 email = st.sidebar.text_input('Masukkan email anda :', value='')
+umur = st.sidebar.selectbox('Masukkan umur anda', ['<20','20 - 30', '30 - 40', '40 - 50', '50 - 60'])
 
+st.sidebar.text('Terima kasih, data anda adalah ')
+st.sidebar.text('Nama ' + nama + ' email ' + email + ' umur ' + umur)
 
-form = st.form(key='my-form')
-inputGRE = form.number_input("Masukan Umur anda : ", 0)
 
 # Title
 st.title('Streamlit app 1st attempt')
