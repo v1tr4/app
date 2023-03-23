@@ -2,3 +2,7 @@ plotly
 scikit-learn
 streamlit
 matplotlib
+vega-lite
+seaborn
+deck.gl
+pyDeck
