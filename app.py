@@ -202,9 +202,27 @@ choice = st.number_input("Choose a number", 0, 50)
 text = st.text_area("Start typing")
 #Time input
 time = st.time_input("Dinner time")
-#file upload
-data = st.file_uploader("Share excel file")
+
 #Slider
 num = st.slider("Pick a number", 0, 5)
 #Select slider
 fruit = st.select_slider("Pick a fruit", ["Apple", "Orange", "Berries"])
+
+from io import StringIO 
+
+#upload single file and display it as a dataframe
+file = st.file_uploader("Please select a file to upload")
+if file is not None:
+    #Can be used wherever a "file-like" object is accepted:
+    df= pd.read_csv(file)
+    st.dataframe(df)
+
+#Maps
+import pandas as pd
+states = pd.read_html('https://developers.google.com/public-data/docs/canonical/states_csv')[0]
+states.columns = ['state', 'lat', 'lon', 'name']
+states = states.drop(['state', 'name'], axis = 1)
+
+st.map(states)
+
+
