@@ -163,16 +163,6 @@ ax.hist(arr, bins=30)
 plt.grid()
 st.pyplot(fig)
 
-#vega-lite
-#st.vega_lite_chart(data)
-#matplotlib
-st.pyplot(fig)
-#deck.gl
-#st.deck_gl_chart(data)
-#pyDeck
-#st.pydeck_chart(data)
-
-
 st.text("button")
 st.button("Click here")
 
