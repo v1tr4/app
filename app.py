@@ -217,12 +217,4 @@ if file is not None:
     df= pd.read_csv(file)
     st.dataframe(df)
 
-#Maps
-import pandas as pd
-states = pd.read_html('https://developers.google.com/public-data/docs/canonical/states_csv')[0]
-states.columns = ['state', 'lat', 'lon', 'name']
-states = states.drop(['state', 'name'], axis = 1)
-
-st.map(states)
-
 
